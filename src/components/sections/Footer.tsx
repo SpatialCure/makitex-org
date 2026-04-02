@@ -48,27 +48,27 @@ export const Footer = () => {
     <footer className="py-24 bg-accent/20 border-t border-primary/5 relative overflow-hidden">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-1/b bg-gradient-to-t from-transparent to-primary/5 blur-[100px] -z-10" />
       
-      <Container className="grid lg:grid-cols-4 gap-20">
-        <div className="col-span-2">
-          <Logo className="mb-10" />
-          <p className="max-w-md text-xl text-muted-foreground leading-relaxed font-body font-medium">
+      <Container className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 sm:gap-20">
+        <div className="col-span-1 sm:col-span-2 lg:col-span-2">
+          <Logo className="mb-8 md:mb-10" />
+          <p className="max-w-md text-lg md:text-xl text-muted-foreground leading-relaxed font-body font-medium">
              Designing, Building and Delivering iconic structures across Ethiopia. Makitex Trading PLC is where architectural vision meets industrial strength.
           </p>
           
-          <div className="flex gap-4 mt-12">
+          <div className="flex flex-wrap gap-4 mt-8 md:mt-12">
              {socials.map(({ Icon, link }, i) => (
-               <a key={i} href={link} target="_blank" rel="noopener noreferrer" className="w-14 h-14 rounded-2xl bg-background flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 shadow-sm shadow-primary/5">
-                 <Icon className="w-6 h-6" />
+               <a key={i} href={link} target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 rounded-2xl bg-background flex items-center justify-center hover:bg-primary hover:text-white transition-all duration-300 hover:-translate-y-2 shadow-sm shadow-primary/5 border border-primary/5">
+                 <Icon className="w-5 h-5 md:w-6 md:h-6" />
                </a>
              ))}
           </div>
         </div>
 
-        <div>
-           <h4 className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-10">Quick Navigation</h4>
-           <div className="flex flex-col gap-6">
+        <div className="pt-4 lg:pt-0">
+           <h4 className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-6 md:mb-10">Quick Navigation</h4>
+           <div className="flex flex-col gap-4 md:gap-6">
               {["Services", "Projects", "About", "Testimonials", "Contact"].map(item => (
-                <a key={item} href={`#${item.toLowerCase()}`} className="text-xl font-heading font-black hover:text-primary transition-colors flex items-center gap-2 group">
+                <a key={item} href={`#${item.toLowerCase()}`} className="text-lg md:text-xl font-heading font-black hover:text-primary transition-colors flex items-center gap-2 group">
                    <span className="w-4 h-0.5 bg-primary/20 transition-all duration-300 group-hover:w-8 group-hover:bg-primary" />
                    {item}
                 </a>
@@ -76,30 +76,30 @@ export const Footer = () => {
            </div>
         </div>
 
-        <div className="flex flex-col">
-           <h4 className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-10">Headquarters</h4>
-           <div className="flex flex-col gap-8">
+        <div className="flex flex-col pt-4 lg:pt-0">
+           <h4 className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-6 md:mb-10">Headquarters</h4>
+           <div className="flex flex-col gap-6 md:gap-8">
               <div className="flex flex-col gap-2">
                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Location</p>
-                 <p className="font-heading font-black text-lg">Adwa Bridge Road, <br />Nati Irb Bldg, 3rd Floor,<br />Addis Ababa, Ethiopia</p>
+                 <p className="font-heading font-black text-base md:text-lg">Adwa Bridge Road, <br />Nati Irb Bldg, 3rd Floor,<br />Addis Ababa, Ethiopia</p>
               </div>
               <div className="flex flex-col gap-2">
                  <p className="text-[10px] font-black uppercase tracking-widest text-muted-foreground">Inquiries</p>
-                 <p className="font-heading font-black text-base leading-relaxed">makitextrading@gmail.com<br />+251 71 485 7133<br />+251 91 326 4556</p>
+                 <p className="font-heading font-black text-sm md:text-base leading-relaxed">makitextrading@gmail.com<br />+251 71 485 7133<br />+251 91 326 4556</p>
               </div>
            </div>
            
            <button 
              onClick={scrollToTop}
-             className="mt-auto ml-auto w-20 h-20 rounded-full border border-primary/20 flex flex-col items-center justify-center hover:bg-primary hover:text-white transition-all duration-500 hover:scale-110 active:scale-95 group shadow-2xl shadow-primary/10"
+             className="mt-10 md:mt-auto ml-auto w-14 h-14 md:w-20 md:h-20 rounded-full border border-primary/20 flex flex-col items-center justify-center hover:bg-primary hover:text-white transition-all duration-500 hover:scale-110 active:scale-95 group shadow-2xl shadow-primary/10"
            >
-              <ArrowUp className="w-8 h-8 group-hover:-translate-y-2 transition-transform" />
-              <span className="text-[8px] font-black uppercase tracking-widest mt-1">TOP</span>
+              <ArrowUp className="w-5 h-5 md:w-8 md:h-8 group-hover:-translate-y-2 transition-transform" />
+              <span className="text-[6px] md:text-[8px] font-black uppercase tracking-widest mt-1">TOP</span>
            </button>
         </div>
       </Container>
 
-      <div className="border-t border-primary/5 mt-24 pt-12 text-center text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground/50">
+      <div className="border-t border-primary/5 mt-16 md:mt-24 pt-8 md:pt-12 text-center text-[8px] md:text-[10px] font-black uppercase tracking-[0.4em] text-muted-foreground/50 px-4">
         &copy; {currentYear} Makitex Trading PLC. Designed & Built for the Future.
       </div>
     </footer>
