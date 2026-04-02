@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "Makitex Trading PLC - Architecture & Construction",
   description: "Modern design and build construction firm in East Africa specializing in high-end residential, commercial design, and quality builds.",
   keywords: ["Construction", "Architecture", "Addis Ababa Building", "Makitex Trading", "Engineering"],
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/favicon.svg",
+  },
   openGraph: {
     title: "Makitex Trading PLC - Architecture & Construction",
     description: "Modern design and build construction firm in East Africa specializing in high-end residential, commercial design, and quality builds.",
